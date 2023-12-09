@@ -34,5 +34,26 @@ namespace DotNetTutorials
 
             return tempNumber == sum ? true : false;
         }
+
+        public void PrintRepetedCharCount(string inputString)
+        {
+            //"Hi How are you"
+            Dictionary<char,int> valuePairsString=new Dictionary<char, int>();
+            foreach(var ch in inputString)
+            {
+                if(valuePairsString.ContainsKey(ch))
+                {
+                    valuePairsString[ch] += 1;
+                }
+                else
+                {
+                    valuePairsString.Add(ch,1);
+                }
+            }
+            foreach(var ch in valuePairsString.Keys)
+            {
+                Console.WriteLine(ch +" : "+valuePairsString[ch]);
+            }
+        }
     }
 }

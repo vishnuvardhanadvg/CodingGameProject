@@ -13,6 +13,7 @@ namespace CodingGameProject
                 $"2.Armstrong number\n" +
                 $"3.Print Fibonacci series\n" +
                 $"4.Numbers using LINQ\n" +
+                $"5. Find repeted chars\n" +
                 $"0.Exit application");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -46,6 +47,12 @@ namespace CodingGameProject
                     Console.WriteLine("4. Numbers using LINQ");
                     PowerOfLINQ pl = new PowerOfLINQ();
                     pl.PlayOnNumbersLINQ();
+                    Main();
+                    break;
+                case 5:
+                    Console.WriteLine("5. Find repeted chars");
+                    NumberPrograms numberPgm=new NumberPrograms();
+                    numberPgm.PrintRepetedCharCount("Hi How are you Naveen");
                     Main();
                     break;
                 default:
